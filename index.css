@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+.btn {
+  cursor: pointer;
+}
+
+body,
+.clock,
+.name,
+.todo,
+.weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: monospace;
+  background-color: gray;
+  color: skyblue;
+  max-width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+}
+
+.clock {
+  height: 200px;
+  position: fixed;
+  top: 100px;
+}
+
+.clock h1 {
+  font-size: 200px;
+}
+
+.form,
+.greetings {
+  display: none;
+}
+.showing {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+  z-index: -1;
+  animation: fadeIn 1s linear;
+}
+
+.column {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  top: 450px;
+}
+
+.name input {
+  border: none;
+  background: transparent;
+  height: 68px;
+  width: 600px;
+  text-align: center;
+  font-family: monospace;
+}
+.name input[type="text"] {
+  font-size: 60px;
+}
+.todo input:focus,
+.name input:focus {
+  outline: none;
+}
+
+.name input::-webkit-input-placeholder {
+  font-size: 60px;
+}
+.greet {
+  font-size: 60px;
+  height: 70px;
+}
+.weather {
+  margin: 10px 0px;
+  font-size: 20px;
+}
+.todo input {
+  border: none;
+  background: transparent;
+  height: 40px;
+  width: 400px;
+  text-align: center;
+  font-family: monospace;
+}
+.todo input::-webkit-input-placeholder {
+  font-size: 30px;
+  color: skyblue;
+}
+.todo input[type="text"] {
+  font-size: 30px;
+  border-bottom: 4px solid skyblue;
+}
+
+.toDoList li {
+  color: skyblue;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.toDoList li button {
+  background: transparent;
+  display: inline-block;
+  padding: 0px 10px;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgba(255, 255, 255, 1);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.toDoList li button:hover {
+  border-color: lightgreen;
+  color: lightgreen;
+}
+.toDoList li button:focus {
+  outline: none;
+}
+.toDoList {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-left: 0;
+}
